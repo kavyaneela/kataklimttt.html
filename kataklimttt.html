@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kataklimt</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                font-family: 'Fira Sans', sans-serif;
+            }
+            header{
+                height: 100px;
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .row1I, .row2I, .row3, .row5, .colm1, .colm2, .colm3, .colm4, .row4, .heartlist,.description, .about .photoshoot, .abtcolgrp, .grpphoto{
+                display: flex;
+                list-style-type: none;
+                flex-wrap: wrap;
+            }
+            .row1I>div, .row5 div{
+                padding: 20px ;
+                text-decoration: none;
+                color: #3a3a3a;
+                display: inline-block;
+            }
+
+            #round{
+                align-items: center;
+                width: 75px;
+                height: 70px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 40px;
+                background:crimson;
+                color:aliceblue;
+            }    
+            .row2{
+                display: flex;
+                flex-wrap: wrap;
+                background-color: rgba(0,0,0,0.756);
+                padding: 20px 100px;
+                color: aliceblue;
+            }
+            .row2I{
+                background-color: rgba(0,0,0,0.756);
+                padding: 20px 100px;
+                color: aliceblue;
+            }
+            .row2I div{
+                height: 50px;
+            }
+            #row2Ii{
+                width: 30%;
+                text-align: center;
+                font-size: x-large; 
+            }
+            #row2Ii::first-letter,span{
+                color: palevioletred;
+            }
+            #row2Iii
+            {
+                width:70%;
+                border-style: none none none groove;
+                border-color:gray ;
+                padding-left: 20px;
+                font-size: small;
+                vertical-align: bottom;
+            }
+            .row3, .row4{
+                background-color: black;
+                padding: 0px 100px;
+            }
+            .row3 >div{
+                width: 25%;
+                padding: 20px;
+                color: aliceblue;
+                justify-content: space-between;
+            }
+            .colm1, .colm2, .colm3, .colm4{
+                flex-direction: column;
+                padding: 5px 100px 0px 100px;
+            }
+            .head1{
+                font-size: medium;
+                font-weight: 400;
+            }
+            .colgrey{
+                color: rgb(164,155,155);
+            }
+            .head2{
+                font-size: small;
+            }
+            .colm1 >div,.colm2 >div, .colm3 >div, .colm4 >div, .about, .photoshoot{
+                padding: 5px 10px;
+            }
+            .button{
+                background-color: crimson;
+                color: aliceblue;
+                height: 40px;
+                width: 100px;
+            }
+            .row4> div{
+                color: aliceblue;
+                width: 50%;
+            }
+            .abtcolgrp >div{
+                width: 50%;
+                padding-right: 20px;
+                padding-top: 10px;
+            }
+            .coltxt{
+                font-size: x-large;
+            }
+        
+            .photoshoot >div{
+                flex-direction: column;
+            }
+            .grpphoto >div{
+                width: 25%;
+                padding: 5px;
+                justify-content: space-evenly;
+            }
+            .description{
+                flex-direction: column;
+                color: aliceblue;
+                font-size: small;
+            }
+            .description>div{
+                padding-bottom: 20px;
+            }
+            .heartlist div{
+                width: 50%;
+                color: crimson;
+                border-style: groove none none none;
+                border-color: gray;
+            }
+            ul {
+                color: crimson;
+                list-style-type: circle;
+            }
+            ul li{
+                padding: 10px;
+            }
+            .row5{
+                justify-content: space-between;
+                background-color: wheat;
+            }
+            .row5 >div> i{
+                width: 25px;
+                height: 20px;
+                -webkit-border-radius:20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+                background: crimson;
+                justify-content: center;
+                text-align: center;
+                color:aliceblue;
+            }    
+            @media only screen and (max-width: 576px)
+             {
+                .row1,.row4,.about,.description
+                {
+                    flex-direction: column;
+                }
+                .row1 > div, .row4 >div, .about >div 
+                {
+                    width:100%;   
+                    align-content: center;  
+                    text-align: center;              
+                    
+                }
+                .row1I
+                {
+                    width:100%;                    
+                    justify-content: center;  
+                    padding:0px;                  
+                }
+                .row1I >div
+                {
+                    padding:10px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .row2I
+                {
+                    flex-direction: column;  
+                    width:100%;     
+                    height:200px; 
+                    padding-bottom: 20px;            
+                }
+                
+                #row2Iii, #row2Ii
+                {
+                    width:100%;
+                    padding: 0px;
+                    justify-content: center;
+                }
+
+                #row2Iii
+                {
+                    border-style: groove none none none ;
+                    border-color:gray ;
+                    padding: 20px;
+                }
+                .row3 > div
+                {
+                    width:50%;
+                }    
+                
+                .row2, .row2I,.row3,.row4
+                {
+                    padding: 20px 50px;
+                }
+                
+                .row4
+                {
+                   flex-direction: column;
+                   align-items: center;                    
+                }
+                
+                .heartlist
+                {
+                    flex-direction: row;
+                    border-style:none none groove none;
+                    border-color: grey;
+                    justify-content:start;      
+                    padding-left: 0px;              
+                }
+                .heartlist> div
+                {
+                    width:50%;                   
+                    
+                }
+                .heartlist> div>ul
+                {
+                    padding-left: 0px;
+                    align-items: center;
+                }
+                .about
+                {
+                    padding-bottom: 20px;
+                }
+                .abtcolgrp
+                {
+                    flex-direction: column;
+                }
+                .grpphoto >div
+                {
+                    width:50%;
+                }
+             }
+
+
+           
+           
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="row1">
+                <h1><strong style="color: palevioletred;">K</strong>ata<strong style="color: palevioletred;">K</strong>limt<br>Photography</h1>
+            </div>    
+
+            <nav class="row1I">
+                <div id="round">About</div>
+                <div>Services</div>
+                <div>Folio</div>
+                <div>Blog</div>
+                <div>Contact</div>
+            </nav>
+        </header>    
+            <div class="row2">
+                <div>
+                    <img src="images/kataklimts.png">
+                </div>
+              
+
+            <div class="row2I">
+                <div id="row2Ii">Welcome!</div>
+
+                <div id="row2Iii" class="colgrey">
+                <span>Click here</span> for more info about this website template created by template monster.com.This is a bootstrap template created with sevral layout options for(desktop,tablet,smartphone)to fit all screen resolution.This template is available for free.
+                </div>
+            </div>
+            </div>
+            
+            
+
+            <div class="row3">
+                <div class="colm1">
+                    <div class="coltxt">Fashion</div>
+                    <div><img src="images/kataklimts (1).png"></div>
+                    <div class="head1">At vero eos et accusamus et iusto</div>
+                    <div class="head2">odio dignissimos ducimus qui blanditiis praesentium</div>
+                    <div><input type="READ MORE" value="Read More" class="button"></div>
+                </div>
+                <div class="colm2">
+                    <div class="coltxt">Nature</div>
+                    <div><img src="images/kataklimts (2).png"></div>
+                    <div class="head1">deleniti atque corrupti quos</div>
+                    <div class="head2">odio dignissimos ducimus qui blanditiis praesentium</div>
+                    <div><input type="READ MORE" value="Read More" class="button"></div>
+                </div>
+                <div class="colm3">
+                    <div class="coltxt">Love Story</div>
+                    <div><img src="images/kataklimts (3).png"></div>
+                    <div class="head1">Similique sunt in culpa qui officia</div>
+                    <div class="head2">odio dignissimos ducimus qui blanditiis praesentium</div>
+                    <div><input type="READ MORE" value="Read More" class="button"></div>
+                </div>
+                <div class="colm4">
+                    <div class="coltxt">Fine Art</div>
+                    <div><img src="images/kataklimts (4).png"></div>
+                    <div class="head1">At vero eos et accusamus et iusto</div>
+                    <div class="head2">odio dignissimos ducimus qui blanditiis praesentium</div>
+                    <div><input type="READ MORE" value="Read More" class="button"></div>
+                </div>
+            </div>
+
+            <div class="row4">
+                <div class="about">
+                    <div class="coltxt">
+                        Shortly About Me
+                    </div>
+                    <div class="abtcolgrp">
+                        <div> <img src="images/kataklimt (5).png" alt=""></div>
+                        <div class="description">
+                            <div> 
+                                Sed ut perspiciatis unde omnis iste natus error sit
+                                voluptatem
+                            </div>
+                            <div class="colgrey">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Facilis minima quis at illum reprehenderit a nulla.
+                            </div>
+                            <div class="heartlist">
+                                <div>
+                                    <ul>
+                                        <li>Campaigns</li>
+                                        <li>Portraits</li>
+                                        <li>Fashion</li>
+                                        <li>Fine Art</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>Advertising</li>
+                                        <li>Lifestyle</li>
+                                        <li>Love Story</li>
+                                        <li>Landscapes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Photoshoot">
+                    <div class="coltxt">
+                        Latest Photoshoots
+                    </div>
+                    <div class="grpphoto">
+                        <div><img src="images/kataklimt (6).png" alt=""></div>
+                        <div><img src="images/kataklimt (7).png" alt=""></div>
+                        <div><img src="images/kataklimt (8).png" alt=""></div>
+                        <div><img src="images/kataklimt (9).png""></div>
+                    </div>
+                    <div class="grpphoto">
+                        <div><img src="images/kataklimt (10).png" alt=""></div>
+                        <div><img src="images/kataklimt (11).png" alt=""></div>
+                        <div><img src="images/kataklimt (12).png" alt=""></div>
+                        <div><img src="images/kataklimt (13).png" alt=""></div>
+                    </div>
+                    <div class="grpphoto">
+                        <div><img src="images/kataklimt (14).png" alt=""></div>
+                        <div><img src="images/kataklimt (15).png" alt=""></div>
+                        <div><img src="images/kataklimt (16).png" alt=""></div>
+                        <div><img src="images/kataklimt (17).png" alt=""></div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        
+
+                <div class="row5">
+                    <div>
+                        @Copyright.
+                    </div>
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
